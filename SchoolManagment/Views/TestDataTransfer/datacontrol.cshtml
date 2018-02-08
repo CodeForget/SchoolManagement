@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>datacontrol</title>
+</head>
+<body>
+    <div>
+        @*Controller to view or Action to View Data transfer*@
+        <h1>viewData Action to Action var: </h1>
+        @ViewData["mytime"]
+        <br />
+        <h1>view Beg Action To View var: </h1>
+        @ViewBag.mytimenow
+        <br />
+        <h1>Temp One Time Complete Request var: </h1>
+        @TempData["mytimeTemp"]
+        <br /><h1>session var: </h1>
+        @Session["MyTimeSession"]
+    </div>
+</body>
+</html>
