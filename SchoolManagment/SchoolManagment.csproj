@@ -187,6 +187,8 @@
     <Content Include="Views\TestDataTransfer\datacontrol.cshtml" />
     <Content Include="Views\TestDataTransfer\Index.cshtml" />
     <Content Include="Views\StudentStaticData\LoadStudent.cshtml" />
+    <Content Include="Views\StudentStaticData\StudentRecord.cshtml" />
+    <Content Include="Views\TestDataTransfer\TempDataFullTruth.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

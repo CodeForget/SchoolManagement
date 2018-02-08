@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TempDataFullTruth</title>
+</head>
+<body>
+    <div> 
+        @{ 
+            string str = TempData.Peek("T1").ToString();
+        }
+        @str
+
+        @*@TempData["T1"]
+        @{ 
+            TempData.Keep("T1");
+        }*@
+    </div>
+</body>
+</html>

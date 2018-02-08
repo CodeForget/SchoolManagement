@@ -28,5 +28,12 @@ namespace SchoolManagment.Controllers
             ViewBag.mytimenow = DateTime.Now.ToLongDateString();
             return View();
         }
+
+        public ActionResult TempDataFullTruth()
+        {
+            //check by putting break point
+            TempData["T1"]= "Test TempData Preserve Value If It Not Read ";
+            return View();
+        }
     }
 }

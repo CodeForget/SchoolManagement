@@ -1,0 +1,42 @@
+﻿@model SchoolManagment.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentRecord</title>
+</head>
+<body>
+    @*<form action="submit" method="post">
+            <div>
+                Enter Student RollNo. :-<input name="RollNo" id="T1" value="@Model.RollNo" type="text" /><br />
+                @Html.ValidationMessageFor(x => x.RollNo)<br />
+                Enter Student Name    :-<input name="StudentName" id="T2" value="@Model.StudentName" type="text" /><br />
+                @Html.ValidationMessageFor(x => x.StudentName)<br />
+                <input id="Submit1" type="submit" value="submit" />
+                @Html.ValidationSummary()
+            </div>
+        </form>*@
+
+    @*Another Way Using Html Helper*@
+
+    @using (Html.BeginForm("submit", "StudentStaticData", FormMethod.Post))
+    {
+    <div>
+        Enter Student RollNo. :-@Html.TextBoxFor(m => m.RollNo) <br/>
+        @Html.ValidationMessageFor(x => x.RollNo) <br/>
+        Enter Student Name    :-@Html.TextBoxFor(m => m.StudentName) <br/>
+        @Html.ValidationMessageFor(x => x.StudentName) <br/>
+        <input id = "Submit1" type = "submit" value = "submit"/>
+        @*@Html.ValidationSummary()*@
+
+    </div>
+
+    }
+
+</body>
+</html>

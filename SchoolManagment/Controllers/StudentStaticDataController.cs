@@ -26,5 +26,39 @@ namespace SchoolManagment.Controllers
 
             return View(stu);
         }
+        public ActionResult EnterStudentRecord()
+        {
+            return View("StudentRecord",new Student());
+        }
+
+        //public ActionResult Submit()
+        //{
+        //    Student stu = new Student();
+        //    stu.RollNo = Request.Form["RollNo"];
+        //    stu.StudentName = Request.Form["StudentName"];
+
+        //    return View("LoadStudent",stu);
+        //}
+
+
+        //An other Way Do same
+
+        public ActionResult Submit(Student stu)
+        {
+            //Student stu = new Student();
+            //stu.RollNo = Request.Form["RollNo"];
+            //stu.StudentName = Request.Form["StudentName"];
+            if(ModelState.IsValid)
+            {
+                return View("LoadStudent", stu);
+            }
+            else
+            {
+                return View("StudentRecord", stu);
+            }
+            
+        }
+
+
     }
 }
