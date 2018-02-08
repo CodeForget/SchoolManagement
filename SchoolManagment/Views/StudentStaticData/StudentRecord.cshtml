@@ -26,17 +26,19 @@
 
     @using (Html.BeginForm("submit", "StudentStaticData", FormMethod.Post))
     {
-    <div>
-        Enter Student RollNo. :-@Html.TextBoxFor(m => m.RollNo) <br/>
-        @Html.ValidationMessageFor(x => x.RollNo) <br/>
-        Enter Student Name    :-@Html.TextBoxFor(m => m.StudentName) <br/>
-        @Html.ValidationMessageFor(x => x.StudentName) <br/>
-        <input id = "Submit1" type = "submit" value = "submit"/>
-        @*@Html.ValidationSummary()*@
+        <div>
+            Enter Student RollNo. :-@Html.TextBoxFor(m => m.RollNo) <br />
+            @Html.ValidationMessageFor(x => x.RollNo) <br />
+            Enter Student Name    :-@Html.TextBoxFor(m => m.StudentName) <br />
+            @Html.ValidationMessageFor(x => x.StudentName) <br />
+            <input id="Submit1" type="submit" value="submit" />
+            @*@Html.ValidationSummary()*@
 
-    </div>
+        </div>
 
     }
-
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 </body>
 </html>
